@@ -1,101 +1,49 @@
 import Image from "next/image";
-
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex justify-center flex-col gap-28 min-h-screen">
+      <Header/>
+      <div className="flex items-center justify-center h-fit flex-col gap-4 ">
+        <h1
+          className="text-3xl text-gray-800 font-medium hover:scale-125 hover:underline transition-all duration-300"
+          style={{ textUnderlineOffset: "8px" }}
+        >
+          Portfolio.
+        </h1>
+        <div className="flex items-center justify-center flex-col h-fit p-4 border-2 rounded-lg border-black bg-gray-800 gap-4 hover:scale-110 transition-transform duration-300">
+          <div className="flex items-center justify-center gap-4">
+            <div className="h-400px mt-40px w-max shadow-2xl shadow-black bg-gray-700 p-1 box-border rounded-2xl hover:border hover:border-white hover:scale-110 transition-transform duration-300">
+              <Image
+                className="rounded-full filter  brightness-100 contrast-125 hover:brightness-105 hover:border-gray-700 hover:border hover:scale-110 transition-transform duration-200 "
+                src="/profile.pic.png"
+                alt="Example Images"
+                width={100}
+                height={100}
+              ></Image>
+            </div>
+            <div className="h-400px mt-40px w-max  bg-gray-700 p-5 rounded-xl box-border text-white hover:border hover:border-white hover:scale-110 transition-transform duration-300">
+              <p className="font-semibold ">Hey,</p>
+              <p>
+                My name is{" "}
+                <span className="font-semibold text-red-500">Mudassar</span>
+              </p>
+              <p>I am a Next JS Developer</p>
+            </div>
+          </div>
+          <div className="h-400px mt-40px w-80 shadow-2xl shadow-black bg-gray-700 py-1 px-6 rounded-xl hover:border text-white hover:border-white hover:scale-110 transition-transform duration-300">
+            <p className="font-semibold text-center text-lg">Description</p>
+            <ul className="list-disc">
+              <li>Fronted Web-Developer</li>
+              <li>TypeScript</li>
+              <li>Next JS (Progress...)</li>
+              <li>UI/UX Designer</li>
+            </ul>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <Footer/>
     </div>
   );
 }
